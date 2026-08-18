@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Management Intergénérationnel — Formation</title>
+<meta name="description" content="Formation Management Intergénérationnel — 20/09/2026, L'Haÿ-les-Roses. Programme, livret stagiaire, informations pratiques et accès.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Comfortaa:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #FAF9F5;
+    --bg-alt: #F1EEE6;
+    --ink: #1A2A3D;
+    --ink-soft: #3D5266;
+    --gen-1: #2E4B6B; /* aînés */
+    --gen-2: #3E7C86; /* génération X */
+    --gen-3: #8B5FA3; /* millennials */
+    --gen-4: #D98E3A; /* génération Z */
+    --card: #FFFFFF;
+    --focus: #0B5FFF;
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+    --shadow: 0 8px 24px rgba(26,42,61,0.08);
+    --max: 980px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Atkinson Hyperlegible', Arial, sans-serif;
+    font-size:18px;
+    line-height:1.65;
+  }
+
+  h1,h2,h3,.brand{
+    font-family:'Comfortaa', 'Atkinson Hyperlegible', sans-serif;
+    font-weight:700;
+    color:var(--ink);
+  }
+
+  a{color:var(--gen-1);}
+  a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline:3px solid var(--focus);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 24px;}
+
+  /* ---------- HEADER ---------- */
+  header.site-head{
+    background:var(--ink);
+    color:#fff;
+    padding:28px 0;
+    border-radius:0 0 var(--radius-lg) var(--radius-lg);
+  }
+  .head-row{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .head-row img.logo{
+    height:64px;
+    width:auto;
+    border-radius:var(--radius-sm);
+    background:#fff;
+    padding:6px;
+  }
+  .head-text h1{color:#fff; margin:0 0 6px 0; font-size:clamp(1.5rem, 3vw, 2.1rem);}
+  .head-text p{margin:0; color:#E7EDF3; font-size:1.05rem;}
+
+  /* ---------- BANNIÈRE / PONT GÉNÉRATIONNEL ---------- */
+  .banner{
+    padding:56px 0 48px 0;
+    text-align:center;
+  }
+  .banner h2{
+    font-size:clamp(1.4rem, 2.6vw, 1.9rem);
+    max-width:700px;
+    margin:0 auto 36px auto;
+  }
+  .bridge{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:0;
+    max-width:640px;
+    margin:0 auto;
+    position:relative;
+  }
+  .bridge svg{width:100%; height:auto; max-width:640px;}
+  .gen-labels{
+    display:flex;
+    justify-content:space-between;
+    max-width:560px;
+    margin:14px auto 0 auto;
+    font-size:0.95rem;
+    color:var(--ink-soft);
+    font-weight:700;
+  }
+  .gen-labels span{flex:1;}
+
+  /* ---------- SECTIONS GÉNÉRALES ---------- */
+  section{padding:44px 0;}
+  section.alt{background:var(--bg-alt); border-radius:var(--radius-lg); margin:0 16px;}
+  h2.section-title{
+    font-size:1.6rem;
+    margin-bottom:6px;
+  }
+  .section-sub{color:var(--ink-soft); margin-top:0; margin-bottom:28px;}
+
+  /* ---------- ACCORDÉON PROGRAMME ---------- */
+  .accordion{max-width:760px; margin:0 auto;}
+  details{
+    background:var(--card);
+    border-radius:var(--radius-md);
+    margin-bottom:14px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    border-left:8px solid var(--gen-1);
+  }
+  details:nth-of-type(2){border-left-color:var(--gen-2);}
+  details:nth-of-type(3){border-left-color:var(--gen-3);}
+  details:nth-of-type(4){border-left-color:var(--gen-4);}
+  details > summary{
+    list-style:none;
+    cursor:pointer;
+    padding:18px 22px;
+    font-family:'Comfortaa', sans-serif;
+    font-weight:700;
+    font-size:1.05rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+  }
+  details > summary::-webkit-details-marker{display:none;}
+  details > summary::after{
+    content:"+";
+    font-size:1.6rem;
+    line-height:1;
+    color:var(--gen-1);
+    flex-shrink:0;
+    transition:transform 0.2s ease;
+  }
+  details[open] > summary::after{content:"–";}
+  .details-body{padding:0 22px 22px 22px; color:var(--ink-soft);}
+  .details-body ul{margin:10px 0 0 0; padding-left:20px;}
+
+  /* ---------- CARTE ---------- */
+  .map-card{
+    max-width:760px;
+    margin:0 auto;
+    background:var(--card);
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .map-card iframe{width:100%; height:340px; border:0; display:block;}
+  .map-info{padding:20px 24px;}
+  .map-info p{margin:4px 0;}
+
+  /* ---------- TÉLÉCHARGEMENTS ---------- */
+  .downloads{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    max-width:760px;
+    margin:0 auto;
+    justify-content:center;
+  }
+  .dl-btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:var(--card);
+    color:var(--ink);
+    text-decoration:none;
+    padding:16px 22px;
+    border-radius:var(--radius-md);
+    box-shadow:var(--shadow);
+    font-weight:700;
+    font-family:'Comfortaa', sans-serif;
+    border:2px solid transparent;
+    min-width:230px;
+    transition:transform 0.15s ease, border-color 0.15s ease;
+  }
+  .dl-btn:hover{transform:translateY(-2px); border-color:var(--gen-1);}
+  .dl-icon{
+    width:40px; height:40px; border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    color:#fff; font-family:'Atkinson Hyperlegible', sans-serif; font-size:0.75rem; font-weight:700;
+    flex-shrink:0;
+  }
+  .dl-btn small{display:block; font-weight:400; color:var(--ink-soft); font-size:0.85rem; font-family:'Atkinson Hyperlegible', sans-serif;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    color:#EDF1F5;
+    padding:44px 0 32px 0;
+    margin-top:24px;
+    border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  footer h3{color:#fff; font-size:1.15rem; margin-bottom:10px;}
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+  }
+  footer a{color:#BFD4EA;}
+  footer p{margin:6px 0; color:#D6DEE6;}
+  .footer-bottom{
+    text-align:center;
+    margin-top:32px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,0.15);
+    font-size:0.85rem;
+    color:#9FB0C0;
+  }
+
+  @media (max-width:640px){
+    .footer-grid{grid-template-columns:1fr;}
+    .head-row{flex-direction:column; align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <img class="logo" src="./logo.png" alt="Logo de l'organisme de formation">
+    <div class="head-text">
+      <h1>Management Intergénérationnel</h1>
+      <p>Manager toutes les générations : comprendre, adapter et agir</p>
+    </div>
+  </div>
+</header>
+
+<section class="banner">
+  <div class="wrap">
+    <h2>Quatre générations, une même équipe : apprendre à construire le pont entre elles.</h2>
+    <div class="bridge" aria-hidden="true">
+      <svg viewBox="0 0 640 160" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 40 130 Q 320 -10 600 130" fill="none" stroke="#D8D2C4" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="60" cy="130" r="26" fill="#2E4B6B"/>
+        <circle cx="220" cy="55" r="26" fill="#3E7C86"/>
+        <circle cx="420" cy="55" r="26" fill="#8B5FA3"/>
+        <circle cx="580" cy="130" r="26" fill="#D98E3A"/>
+      </svg>
+    </div>
+    <div class="gen-labels">
+      <span>Baby-boomers</span>
+      <span>Génération X</span>
+      <span>Millennials</span>
+      <span>Génération Z</span>
+    </div>
+  </div>
+</section>
+
+<section id="programme">
+  <div class="wrap">
+    <h2 class="section-title">Le programme</h2>
+    <p class="section-sub">Une journée complète, 9h00 – 16h15, pensée pour des managers de la restauration rapide.</p>
+    <div class="accordion">
+      <details open>
+        <summary>9h00 – 10h10 · Accueil et repères généraux</summary>
+        <div class="details-body">
+          <p>Cadrage de la journée puis premier travail sur les représentations : sortir des étiquettes générationnelles pour lire une situation avec plus de finesse.</p>
+          <ul>
+            <li>Accueil, contrat de participation et attentes</li>
+            <li>Distinguer fait, interprétation, jugement, stéréotype et hypothèse</li>
+            <li>Activité "Mythe, réalité ou hypothèse ?"</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>10h20 – 12h10 · Analyser avant d'agir avec CAPTER</summary>
+        <div class="details-body">
+          <p>Découverte de la méthode CAPTER (Constater, Approfondir, Percevoir, Traduire, Engager, Réajuster) puis travail sur le sens des consignes et la posture managériale.</p>
+          <ul>
+            <li>Méthode CAPTER appliquée à des mini-situations</li>
+            <li>Atelier "Deux regards, une réponse" en sous-groupes</li>
+            <li>Donner du sens à une consigne, poser un cadre non négociable</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>12h55 – 14h35 · Communiquer avec assertivité</summary>
+        <div class="details-body">
+          <p>Structurer sa communication pour recadrer sans attaquer la personne, puis s'entraîner en conditions réelles.</p>
+          <ul>
+            <li>Structure OSBD (Observation, Sentiment, Besoin, Demande)</li>
+            <li>Reformuler une phrase agressive en demande professionnelle</li>
+            <li>Jeu de rôle en trinômes avec grille d'observateur</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>14h45 – 16h15 · Gérer les tensions et ancrer sur le terrain</summary>
+        <div class="details-body">
+          <p>Repérer l'escalade d'un désaccord, s'entraîner à le désamorcer, puis construire une action concrète à tester dans les 7 jours.</p>
+          <ul>
+            <li>Grille de résolution de désaccords et challenge "Sauver le shift"</li>
+            <li>Plan d'action individuel et challenge terrain à 7 jours</li>
+            <li>Quiz final, satisfaction à chaud et clôture</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="infos-pratiques">
+  <div class="wrap">
+    <h2 class="section-title">Informations pratiques</h2>
+    <p class="section-sub">Date, lieu et accès à la formation.</p>
+    <div class="downloads" style="margin-bottom:28px;">
+      <div class="dl-btn" style="cursor:default;">
+        <span class="dl-icon" style="background:var(--gen-2);">⏱</span>
+        <span>Durée<br><small>1 journée · 9h00 – 16h15</small></span>
+      </div>
+      <div class="dl-btn" style="cursor:default;">
+        <span class="dl-icon" style="background:var(--gen-4);">👥</span>
+        <span>Public<br><small>Managers en restauration rapide</small></span>
+      </div>
+    </div>
+    <div class="map-card">
+      <iframe
+        src="https://www.google.com/maps?q=10+rue+Sainte+Colombe,+94240+L%27Ha%C3%BF-les-Roses&output=embed"
+        loading="lazy"
+        title="Carte du lieu de formation : 10 rue Sainte Colombe, 94240 L'Haÿ-les-Roses"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="map-info">
+        <p><strong>📅 Date :</strong> 20 septembre 2026</p>
+        <p><strong>📍 Lieu :</strong> L'Haÿ-les-Roses</p>
+        <p><strong>🏠 Adresse :</strong> 10 rue Sainte Colombe, 94240 L'Haÿ-les-Roses</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="telechargements">
+  <div class="wrap">
+    <h2 class="section-title">Documents à télécharger</h2>
+    <p class="section-sub">Le programme complet et le livret stagiaire au format PDF.</p>
+    <div class="downloads">
+      <a class="dl-btn" href="./programme.pdf" download>
+        <span class="dl-icon" style="background:var(--gen-1);">PDF</span>
+        <span>Programme de formation<br><small>Télécharger le PDF</small></span>
+      </a>
+      <a class="dl-btn" href="./livret-stagiaire.pdf" download>
+        <span class="dl-icon" style="background:var(--gen-3);">PDF</span>
+        <span>Livret stagiaire<br><small>Télécharger le PDF</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>Contact du formateur</h3>
+        <p>Ledo Pontes Raimundo</p>
+        <p><a href="mailto:rledopontes@gmail.com">rledopontes@gmail.com</a></p>
+        <p><a href="tel:+33658111828">06 58 11 18 28</a></p>
+      </div>
+      <div>
+        <h3>Accessibilité &amp; handicap</h3>
+        <p>Des adaptations sont prévues selon les besoins : contrastes renforcés et documents zoomables pour la malvoyance, consignes écrites pour la difficulté auditive, alternance des formats contre la fatigue cognitive, et possibilité de participer par le chat plutôt qu'à l'oral.</p>
+        <p>Une question sur les besoins d'adaptation est transmise avant la formation. Pour toute demande, contactez le formateur ci-contre au plus tôt avant la session.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Management Intergénérationnel — Session du 20 septembre 2026 — L'Haÿ-les-Roses
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
